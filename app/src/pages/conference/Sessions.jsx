@@ -77,7 +77,7 @@ function SessionList ({ day }) {
 
 	// execute query and store response json
   const { loading, error, data } = useQuery(SESSIONS, {
-    variables: {day}
+    variables: {"day": day}
   });
   
 	if (loading) return <p>Loading Sessions..</p>
@@ -185,7 +185,7 @@ export function Sessions() {
   );
 }
 
-export function SessionForm() {	
+export function SessionForm() {
 
   const updateSessions = (cache, { data }) => {
     cache.modify({ 
